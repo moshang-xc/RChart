@@ -10,7 +10,8 @@
 
 ## 效果展示
 
-![柱图，折线，雷达，漏斗](https://github.com/moshang-xc/gitskills/blob/master/share/step1.jpg)
+### 柱图，折线，雷达，漏斗
+![柱图，折线，雷达，漏斗](https://github.com/moshang-xc/gitskills/blob/master/share/chart1.jpg)
 
-
-![饼图](https://github.com/moshang-xc/gitskills/blob/master/share/step2.jpg)
+### 饼图
+![饼图](https://github.com/moshang-xc/gitskills/blob/master/share/chart2.jpg)
