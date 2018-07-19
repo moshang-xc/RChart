@@ -10,7 +10,7 @@
 
 ## 效果展示
 
-### 柱图，折线，雷达，漏斗
+### 柱图，折线图，雷达图，漏斗图
 ![柱图，折线，雷达，漏斗](https://github.com/moshang-xc/gitskills/blob/master/share/chart1.jpg)
 
 ### 饼图
