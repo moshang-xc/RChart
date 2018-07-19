@@ -5,55 +5,55 @@
 }
 
 .BaseChartWrapOuter {
-    /*border: 1px solid #429CF3;*/
+    border: 1px solid #38adff;
     position: relative;
-    /*box-shadow: 0 0 6px #83BAEF;*/
-    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.14);
+    border-radius: 3px;
     text-align: center;
     margin-right: 1em;
     float: left;
-    font-family: "å¾®è½¯é›…é»‘";
+    font-family: "microsoft yahei";
     overflow: hidden;
 }
 
-    .BaseChartWrapOuter:hover {
-        /*box-shadow: 0 0 9px #429CF3;*/
-    }
+.BaseChartWrapOuter:hover {
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.24);
+}
 
-    .BaseChartWrapOuter .BaseChartTitle {
-        width: 100%;
-        height: 35px;
-        line-height: 35px;
-        text-align: left;
-        text-indent: 1em;
-        background-color: #429CF3;
-        color: white;
-    }
+.BaseChartWrapOuter .BaseChartTitle {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: left;
+    text-indent: 1em;
+    background-color: #38adff;
+    color: white;
+}
 
-    .BaseChartWrapOuter .BaseChartChart {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
+.BaseChartWrapOuter .BaseChartChart {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
-    .BaseChartWrapOuter .BaseChartCategories,
-    .BaseChartWrapOuter .BaseChartSeries {
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        position: absolute;
-    }
+.BaseChartWrapOuter .BaseChartCategories,
+.BaseChartWrapOuter .BaseChartSeries {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+}
 
-        .BaseChartWrapOuter .BaseChartSeries.showChart {
-            height: 30px;
-            line-height: 30px;
-        }
+.BaseChartWrapOuter .BaseChartSeries.showChart {
+    height: 30px;
+    line-height: 30px;
+}
 
-    .BaseChartWrapOuter .BaseChartCategories {
-        left: 0;
-        bottom: 50px;
-        background-color:#fff;
-    }
+.BaseChartWrapOuter .BaseChartCategories {
+    left: 0;
+    bottom: 50px;
+    background-color: #fff;
+}
 
 .BaseChartCategories.BaseChartHover,
 .BaseChartChart.BaseChartHover,
@@ -66,9 +66,9 @@
     bottom: 0px;
 }
 
- .report-home .BaseChartWrapOuter .BaseChartSeries{
-     bottom:6px;
- }
+.report-home .BaseChartWrapOuter .BaseChartSeries {
+    bottom: 6px;
+}
 
 .BaseChartWrapOuter .BaseChartLengend {
     height: 100%;
@@ -103,15 +103,15 @@
     cursor: pointer;
 }
 
-    .BaseChartWrapOuter .SeriesLi i {
-           height: 12px;
+.BaseChartWrapOuter .SeriesLi i {
+    height: 12px;
     width: 12px;
     position: absolute;
     left: 0;
     border-radius: 3px;
     top: 50%;
     margin-top: -6px;
-    }
+}
 
 .BaseChartWrapOuter .bar_close {
     width: 20px;
@@ -130,9 +130,9 @@
     text-align: center;
 }
 
-    .BaseChartWrapOuter .bar_close:hover {
-        background-color: red;
-    }
+.BaseChartWrapOuter .bar_close:hover {
+    background-color: red;
+}
 
 .bar_all {
     position: absolute;
@@ -151,14 +151,14 @@
     line-height: 30px;
 }
 
-.bar-animate{
+.bar-animate {
     -webkit-animation: twinkling 2s infinite ease-in-out;
     -ms-animation: twinkling 2s infinite ease-in-out;
     -o-animation: twinkling 2s infinite ease-in-out;
     animation: twinkling 2s infinite ease-in-out;
 }
 
-.chart-arrow{    
+.chart-arrow {
     position: absolute;
     left: 0;
     top: 5px;
@@ -167,50 +167,64 @@
     z-index: 100;
 }
 
-.bar_all_up:before, .bar_all_up:after, .bar_all_down:before, .bar_all_down:after,.bar_all_up .chart-arrow:before, .bar_all_up .chart-arrow:after, .bar_all_down .chart-arrow:before, .bar_all_down .chart-arrow:after {
+.bar_all_up:before,
+.bar_all_up:after,
+.bar_all_down:before,
+.bar_all_down:after,
+.bar_all_up .chart-arrow:before,
+.bar_all_up .chart-arrow:after,
+.bar_all_down .chart-arrow:before,
+.bar_all_down .chart-arrow:after {
     content: '';
     position: absolute;
     left: 0;
     border: 6px solid transparent;
 }
 
-.bar_all_up:before,.bar_all_up .chart-arrow:before {
+.bar_all_up:before,
+.bar_all_up .chart-arrow:before {
     top: 4px;
     left: 50%;
     margin-left: -6px;
     border-bottom-color: #565656;
 }
 
-.bar_all_up:after,.bar_all_up .chart-arrow:after {
+.bar_all_up:after,
+.bar_all_up .chart-arrow:after {
     top: 5px;
     left: 50%;
     border-bottom-color: #fff;
     margin-left: -6px;
 }
 
-.bar_all_down:before,.bar_all_down .chart-arrow:before {
+.bar_all_down:before,
+.bar_all_down .chart-arrow:before {
     top: 8px;
     left: 50%;
     margin-left: -6px;
     border-top-color: #565656;
 }
 
-.bar_all_down:after,.bar_all_down .chart-arrow:after {
+.bar_all_down:after,
+.bar_all_down .chart-arrow:after {
     top: 7px;
     left: 50%;
     margin-left: -6px;
     border-top-color: #fff;
 }
-.bar_all_down:before, .bar_all_down:after{
-    z-index:200;
+
+.bar_all_down:before,
+.bar_all_down:after {
+    z-index: 200;
 }
 
-.bar_all_right{
-    transform:rotate(90deg);  
+.bar_all_right {
+    transform: rotate(90deg);
     top: auto;
     bottom: 0;
 }
-.bar_all_left{    
+
+.bar_all_left {
     transform: rotate(-90deg);
     top: auto;
     left: 0;
@@ -218,28 +232,30 @@
     right: auto;
 }
 
-@-webkit-keyframes twinkling { /*é€æ˜Žåº¦ç”±0åˆ°1*/
+@-webkit-keyframes twinkling {
+    /*é€æ˜Žåº¦ç”±0åˆ°1*/
     0% {
-        opacity: 0.4; /*é€æ˜Žåº¦ä¸º0*/
+        opacity: 0.4;
+        /*é€æ˜Žåº¦ä¸º0*/
     }
-
     100% {
-        opacity: 1; /*é€æ˜Žåº¦ä¸º1*/
+        opacity: 1;
+        /*é€æ˜Žåº¦ä¸º1*/
     }
 }
 
-@keyframes twinkling { 
+@keyframes twinkling {
     0% {
-        opacity: 0.4; 
+        opacity: 0.4;
     }
-
     100% {
-        opacity: 1; 
+        opacity: 1;
     }
 }
-.wrapUl{
-    transform:translate(0);
-    transition:transform ease .5s;
+
+.wrapUl {
+    transform: translate(0);
+    transition: transform ease .5s;
 }
 
 .BaseChartWrapOuter .BaseChartCateItem {
@@ -276,40 +292,39 @@
     display: none;
 }
 
-    .BaseChartFieldSet .fieldItem {
-        float: left;
-        position: relative;
-        height: 25px;
-        line-height: 25px;
-        padding: 0 1em;
-        border-radius: 2px;
-        background-color: #000;
-        cursor: pointer;
-        color: white;
-        font-size: 12px;
-        margin: 5px;
-    }
+.BaseChartFieldSet .fieldItem {
+    float: left;
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 1em;
+    border-radius: 2px;
+    background-color: #000;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+    margin: 5px;
+}
 
-        .BaseChartFieldSet .fieldItem i {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            height: 16px;
-            line-height: 16px;
-            width: 16px;
-            border-radius: 8px;
-            background-color: #000;
-            color: white;
-            font-size: 12px;
-            font-family: 'å¾®è½¯é›…é»‘';
-            font-style: normal;
-            text-align: center;
-        }
+.BaseChartFieldSet .fieldItem i {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    height: 16px;
+    line-height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    background-color: #000;
+    color: white;
+    font-size: 12px;
+    font-family: 'å¾®è½¯é›…é»‘';
+    font-style: normal;
+    text-align: center;
+}
 
-            .BaseChartFieldSet .fieldItem i:hover {
-                background-color: #f00;
-            }
-
+.BaseChartFieldSet .fieldItem i:hover {
+    background-color: #f00;
+}
 
 /*********************  åž‚ç›´æŸ±å½¢å›¾  ********************/
 
@@ -330,7 +345,6 @@
     font-family: "å¾®è½¯é›…é»‘";
 }
 
-
 /*.BarChart_vBar .name {
     height: 20px;
     width: 100%;
@@ -347,15 +361,15 @@
     /*background-color: #99c0ff;*/
 }
 
-    .BarChart_vBar .rate .bg {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 0;
-        background-color: #99c0ff;
-        transition: all 1s;
-    }
+.BarChart_vBar .rate .bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: #99c0ff;
+    transition: all 1s;
+}
 
 .BarChart_vBar .per {
     position: absolute;
@@ -385,7 +399,6 @@
     z-index: 100;
 }
 
-
 /*.toolTip:before {
     content: '';
     width: 0;
@@ -406,9 +419,9 @@
     cursor: pointer;
 }
 
-    .BarChartLineWrap:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-    }
+.BarChartLineWrap:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
 .RadarChartWrap,
 .FunnelChartWrap,
@@ -437,10 +450,6 @@
     visibility: hidden;
 }
 
-.clearfix {
-    *+height: 1%;
-}
-
 .ChartToolTopWrap {
     position: absolute;
     width: 100%;
@@ -456,13 +465,13 @@
     text-align: left;
     position: absolute;
     border-radius: 4px;
-    font-family: 'å¾®è½¯é›…é»‘';
-    border:0px solid rgb(51,51,51);
-    transition:left 0.4s,top 0.4s,right 0.4s;
-    color:#fff;
-    background-color: rgba(0,0,0,0.701916);
+    font-family: 'microsoft yahei';
+    border: 0px solid rgb(51, 51, 51);
+    transition: left 0.4s, top 0.4s, right 0.4s;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.701916);
     display: none;
-    z-index:1;
+    z-index: 1;
 }
 
 /*.ChartToolTipMobile {
@@ -479,31 +488,30 @@
     line-height: 16px;
 }
 
-
-.ChartScrollWrap{
-    position:absolute;
-    left:0;
-    width:100%;
-    height:4px;
-    background-color:rgba(184,221,232,0.5);
-    cursor:pointer;
+.ChartScrollWrap {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(184, 221, 232, 0.5);
+    cursor: pointer;
 }
 
-.ChartScrollWrap .ChartScrollBar{
-    position:absolute;
-    left:0;
-    top:0;
-    background-color:rgba(75, 155, 237, 0.8);
-    height:4px;
-    border-radius:5px;
+.ChartScrollWrap .ChartScrollBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(75, 155, 237, 0.8);
+    height: 4px;
+    border-radius: 5px;
 }
 
-.ChartScrollWrap .BarIcon{
+.ChartScrollWrap .BarIcon {
     position: absolute;
     border-radius: 50%;
     border: 2px solid #4b9bed;
     top: -5px;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     left: 30px;
     width: 10px;
     height: 10px;
@@ -513,7 +521,7 @@
     z-index: 10002;
 }
 
-.ChartScrollWrap .BarTip{
+.ChartScrollWrap .BarTip {
     height: 10px;
     width: 10px;
     position: absolute;
@@ -522,21 +530,21 @@
     top: -3px;
 }
 
-.BarTip:before{
-    content:"";
-    width:4px;
+.BarTip:before {
+    content: "";
+    width: 4px;
     cursor: pointer;
-    height:4px;
-    border-radius:50%;
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin:-2px 0 0 -2px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -2px 0 0 -2px;
     background-color: #aaa;
 }
 
- .tool-tip {
-        position: fixed;
+.tool-tip {
+    position: fixed;
     padding: 3px 8px;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -547,31 +555,31 @@
     text-align: left;
     z-index: 10000;
     line-height: 1.4238;
-    }
-    
-    .tool-tip:before {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -6px;
-        border: 6px solid transparent;
-        border-top-color: #ccc;
-    }
-     .tool-tip:after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -6px;
-        margin-top:-1px;
-        border: 6px solid transparent;
-        border-top-color: #fff;
-    }
+}
 
-    
- .icon-tooltip{    
-        position: absolute;
+.tool-tip:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border: 6px solid transparent;
+    border-top-color: #ccc;
+}
+
+.tool-tip:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    margin-top: -1px;
+    border: 6px solid transparent;
+    border-top-color: #fff;
+}
+
+.icon-tooltip {
+    position: absolute;
     top: 50%;
     font-size: 20px;
     border-radius: 50%;
@@ -583,10 +591,10 @@
     margin-left: 2px;
     /*cursor: pointer;*/
     /*border: 1px solid #4b9bed;*/
- }
+}
 
- .demotext{
-        line-height: 1.2857;
+.demotext {
+    line-height: 1.2857;
     border: 1px solid #ff4141;
     color: #ff4141;
     background-color: #fff;
@@ -599,5 +607,5 @@
     width: 70px;
     box-sizing: border-box;
     text-align: center;
-    display:none;
- }
+    display: none;
+}

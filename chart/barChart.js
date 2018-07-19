@@ -16,6 +16,7 @@ let Bar = function(opt = {}, target = $('body')) {
 };
 
 Bar.prototype = {
+    constructor: Bar,
     setDefault: function() {
         this.$outer.html('');
         this.$wrap = $(`<div class="LineChartWrap" style="width: ${this.opt.Width}px; height: ${this.opt.Height}px;"></div>`);

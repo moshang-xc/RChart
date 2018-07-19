@@ -28,6 +28,7 @@ var Radar = function(opt = {}, target = $('body')) {
     this.init();
 };
 Radar.prototype = {
+    constructor: Radar,
     init: function() {
         if (this.opt.Width == 0 || this.opt.Height == 0) {
             return;

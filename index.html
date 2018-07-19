@@ -16,7 +16,7 @@
     <![endif]-->
     <style type="text/css">
         canvas {
-            outline: 1px solid #999;
+            /* outline: 1px solid #999; */
         }
 
         .BaseChartWrapOuter {
@@ -29,48 +29,37 @@
 <body>
     <div id="cn_right" class="clearFix">
     </div>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+    <script type="text/javascript" src="./chart/jquery.js"></script>
     <script type="module" src="./chart/Chart.js"></script>
-    <script type="text/javascript" src="ChartBase.js"></script>
+    <script type="text/javascript" src="./chart/ChartBase.js"></script>
     <script type="text/javascript">
         $(function() {
             // window.init();
             var index = 0;
-            var dataS = ['语文', '数学', '英语'];
+            var dataS = ['系列一', '系列二', '系列三'];
             var dataS1 = ['语文1', '数学1', '英语1'];
 
-            var dataC = ['Jim', 'Lucy', 'Lily', 'Adele', 'Novak', 'kkk', 'ffff', 'tttt', 'hhhh'];
+            var dataC = ['Jim', 'Lucy', 'Lily', 'Adele', 'Novak'];
 
             var Series = [{
-                'Name': '语文',
-                'Data': ["10.00", 0, "78.00", "34.45", 99.00, 78.00, 45.00, 89.00, 22.00]
+                'Name': '系列一',
+                'Data': ["10.00", 80, "78.00", "34.45", 99.00]
             }, {
-                'Name': '数学',
-                'Data': [10, 78.34, 0, "89.78", 78, 45, 89, "56.000", 22]
+                'Name': '系列二',
+                'Data': [10, 78.34, 40, "89.78", 78]
             }, {
-                'Name': '英语',
-                'Data': [0, 56, "56.000", 78, 34, "89.78", 78, 45, 89]
+                'Name': '系列三',
+                'Data': [100, 56, "56.000", 78, 34]
             }, {
-                'Name': '进了对方',
-                'Data': [78, 0, "56.000", 56, 45, 89, 22, "89.78", 78]
+                'Name': '系列四',
+                'Data': [78, 90, "56.000", 56, 45]
             }, {
-                'Name': '分割线',
-                'Data': [12, 34, "56.000", 0, "89.78", 78, 45, 89, 22]
+                'Name': '系列五',
+                'Data': [12, 34, "56.000", 70, "89.78"]
             }, {
-                'Name': '豆腐干',
-                'Data': ["89.78", 78, 0, 56, 78, 89, 22, 34, 45]
-            }, {
-                'Name': '大范甘迪',
-                'Data': [71, 56, 34, 78, 0, 78, 45, 89, 22]
-            }, {
-                'Name': '感到反感 ',
-                'Data': [39, 34, "56.000", 56, "89.78", 0, 45, 89, 22]
-            }, {
-                'Name': '风格化',
-                'Data': [76, 78, "89.78", 78, "56.000", 34, 0, 89, 22]
-            }, {
-                'Name': '挂号费',
-                'Data': [5, 56, 78, 34, "89.78", 78, 45, 0, 22]
+                'Name': '系列六',
+                'Data': ["89.78", 78, 18, 56, 78]
             }];
 
             var data = {
@@ -78,183 +67,36 @@
                 Series: []
             };
 
-            // //canvas柱状图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 1,
-            //     Width: 420,
-            //     Height: 300,
-            //     setCfg: false,
-            //     Categories: dataC,
-            //     Series: Series,
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-
-            // //折线图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 0,
-            //     Width: 420,
-            //     Height: 300,
-            //     setCfg: false,
-            //     Categories: ['Jim', 'Lucy', 'Lily', 'Adele', 'Novak', 'kkk', 'ffff', 'tttt', 'hhhh', 'ttxx'],
-            //     Series: [{
-            //         'Name': '语文',
-            //         'Data': [0, 20, 60, 40, 80, 66, 45, 55, 77, 73]
-            //     }, {
-            //         'Name': '数学',
-            //         'Data': [0, 80, 55, 76, 33, 45, 78, 34, 66, 88]
-            //     }, {
-            //         'Name': '英语',
-            //         'Data': [0, 24, 33, 54, 58, 45, 78, 66, 55, 60]
-            //     }],
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-
-            // //canvas折线图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 0,
-            //     Width: 420,
-            //     Height: 300,
-            //     setCfg: false,
-            //     Categories: [{
-            //         value: 'LilJiiiiLukkkcy',
-            //         key: "x"
-            //     }, {
-            //         value: '豆腐干岁法',
-            //         key: "x"
-            //     }, {
-            //         value: '大幅度',
-            //         key: "x"
-            //     }, {
-            //         value: '豆腐干反对',
-            //         key: "x"
-            //     }, {
-            //         value: '的是法国',
-            //         key: "x"
-            //     }, {
-            //         value: '都十分广',
-            //         key: "x"
-            //     }],
-            //     Series: [{
-            //         'Name': '语文',
-            //         'Data': ["0.04", "0.45", 0.3, 1.2, 0.25, 0.84]
-            //     }],
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-
-            //雷达图
-            $('#cn_right').ChartBase({
-                ChartType: 3,
-                Width: 600,
-                Height: 500,
-                setCfg: false,
-                Categories: ['类别1', '类别2', '类别3', '类别4', '类别5', '类别6', '类别7'],
-                Series: [{
-                    'Name': '系列1',
-                    'Data': [100, 20, 60, 40, 80, 66, 45]
-                }, {
-                    'Name': '系列2',
-                    'Data': [40, 80, 55, 76, 33, 45, 78]
-                }, {
-                    'Name': '系列3',
-                    'Data': [10, 24, 33, 54, 58, 45, 66]
-                }],
-                ShowTitle: true,
-                ClickChartCBack: function(ret) {
-                    alert(ret.Name + ':' + ret.Data + ':' + ret.Category);
-                }
-            });
-            return;
-
-            // //canvas柱状图
+            //canvas柱状图
             $('#cn_right').ChartBase({
                 ChartType: 1,
                 Width: 420,
                 Height: 300,
-                // ShowSeries: false,
                 setCfg: false,
-                Categories: [{
-                    value: 'LilJiLucy',
-                    key: "x"
-                }, {
-                    value: '豆腐干岁哈哈的',
-                    key: "x"
-                }, {
-                    value: '大幅度',
-                    key: "x"
-                }, {
-                    value: '豆腐干反对',
-                    key: "x"
-                }, {
-                    value: '的是法国',
-                    key: "x"
-                }, {
-                    value: '都十分广',
-                    key: "x"
-                }, {
-                    value: 'LilJiLucy',
-                    key: "x"
-                }, {
-                    value: '豆腐干岁的法',
-                    key: "x"
-                }, {
-                    value: '大幅度',
-                    key: "x"
-                }, {
-                    value: '豆腐干反对',
-                    key: "x"
-                }, {
-                    value: '的是法国',
-                    key: "x"
-                }, {
-                    value: '都十分广',
-                    key: "x"
-                }],
-                Series: [{
-                    'Name': '语文',
-                    'Data': ["3.00", "4.45", 3, 2, 5, 4, "3.00", "4.45", 3, 2, 5, 4]
-                }],
+                Categories: dataC,
+                Series: Series,
                 ShowTitle: true,
                 ClickChartCBack: function(ret) {
                     alert(ret.Name + ':' + ret.Data);
                 }
             });
-            //canvas折线图
+
+            //折线图
             $('#cn_right').ChartBase({
                 ChartType: 0,
                 Width: 420,
                 Height: 300,
                 setCfg: false,
-                Categories: [{
-                    value: 'LilJiiiiLukkkcy',
-                    key: "x"
-                }, {
-                    value: '豆腐干岁法',
-                    key: "x"
-                }, {
-                    value: '大幅度',
-                    key: "x"
-                }, {
-                    value: '豆腐干反对',
-                    key: "x"
-                }, {
-                    value: '的是法国',
-                    key: "x"
-                }, {
-                    value: '都十分广',
-                    key: "x"
-                }],
+                Categories: ['Jim', 'Lucy', 'Lily', 'Adele', 'Novak', 'kkk', 'ffff', 'tttt', 'hhhh', 'ttxx'],
                 Series: [{
                     'Name': '语文',
-                    'Data': ["0.04", "0.45", 0.3, 1.2, 0.25, 0.84]
+                    'Data': [0, 20, 60, 40, 80, 66, 45, 55, 77, 73]
+                }, {
+                    'Name': '数学',
+                    'Data': [0, 80, 55, 76, 33, 45, 78, 34, 66, 88]
+                }, {
+                    'Name': '英语',
+                    'Data': [0, 24, 33, 54, 58, 45, 78, 66, 55, 60]
                 }],
                 ShowTitle: true,
                 ClickChartCBack: function(ret) {
@@ -265,8 +107,8 @@
             //雷达图
             $('#cn_right').ChartBase({
                 ChartType: 3,
-                Width: 600,
-                Height: 500,
+                Width: 420,
+                Height: 420,
                 setCfg: false,
                 Categories: ['类别1', '类别2', '类别3', '类别4', '类别5', '类别6', '类别7'],
                 Series: [{
@@ -285,325 +127,37 @@
                 }
             });
 
-            var Series1 = [{
-                'Name': '语文',
-                'Data': ["10.00"]
-            }, {
-                'Name': '数学',
-                'Data': [10]
-            }, {
-                'Name': '英语',
-                'Data': [10]
-            }, {
-                'Name': '进了对方',
-                'Data': [18]
-            }, {
-                'Name': '分割线',
-                'Data': [12]
-            }, {
-                'Name': '豆腐干',
-                'Data': ["19.78"]
-            }, {
-                'Name': '大范甘迪',
-                'Data': [11]
-            }, {
-                'Name': '感到反感 ',
-                'Data': [19]
-            }, {
-                'Name': '士大夫 ',
-                'Data': [19]
-            }, {
-                'Name': '反对 ',
-                'Data': [19]
-            }, {
-                'Name': '如图',
-                'Data': [26]
-            }, {
-                'Name': '复古风格 ',
-                'Data': [19]
-            }, {
-                'Name': '人反感',
-                'Data': [86]
-            }, {
-                'Name': '复古风',
-                'Data': [76]
-            }, {
-                'Name': '挂号费',
-                'Data': [5]
-            }, {
-                'Name': '语文',
-                'Data': ["10.00"]
-            }, {
-                'Name': '数学',
-                'Data': [10]
-            }, {
-                'Name': '英语',
-                'Data': [10]
-            }, {
-                'Name': '进了对方',
-                'Data': [18]
-            }, {
-                'Name': '分割线',
-                'Data': [12]
-            }, {
-                'Name': '豆腐干',
-                'Data': ["19.78"]
-            }, {
-                'Name': '大范甘迪',
-                'Data': [11]
-            }, {
-                'Name': '士大夫 ',
-                'Data': [19]
-            }, {
-                'Name': '反对 ',
-                'Data': [19]
-            }, {
-                'Name': '如图',
-                'Data': [16]
-            }, {
-                'Name': '复古风格 ',
-                'Data': [19]
-            }, {
-                'Name': '人反感',
-                'Data': [16]
-            }, {
-                'Name': '复古风',
-                'Data': [16]
-            }, {
-                'Name': '挂号费',
-                'Data': [5]
-            }];
-
-
-            //饼图
-            $('#cn_right').ChartBase({
-                ChartType: 2,
-                Width: 450,
-                Height: 450,
-                setCfg: false,
-                Categories: ['语文'],
-                BarGap: 5,
-                Series: Series1,
-                ShowTitle: true,
-                ClickChartCBack: function(ret) {
-                    alert(ret.Name + ':' + ret.Data);
-                }
-            });
 
             //漏斗图
             $('#cn_right').ChartBase({
                 ChartType: 4,
-                Width: 450,
-                Height: 450,
+                Width: 420,
+                Height: 420,
                 setCfg: false,
-                Categories: ['语文'],
+                Categories: ['系列一'],
                 BarGap: 5,
-                Series: Series1,
+                Series: Series,
                 ShowTitle: true,
                 ClickChartCBack: function(ret) {
                     alert(ret.Name + ':' + ret.Data);
                 }
             });
 
-            // //canvas柱状图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 1,
-            //     Width: 420,
-            //     Height: 300,
-            //     setCfg: false,
-            //     Categories: [{value:'LilJiLttukkkcy',key:"x"}, {value:'豆腐干岁法',key:"x"}, {value:'大幅度',key:"x"}, {value:'豆腐干反对',key:"x"}, {value:'的是法国',key:"x"}, {value:'都十分广',key:"x"}],
-            //     Series: [{
-            //         'Name': '语文',
-            //         'Data': ["0.04", "0.45", 0.3, 1.2, 0.25, 0.84]
-            //     }],
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-
-
-            // //canvas柱状图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 0,
-            //     Width: 420,
-            //     Height: 300,
-            //     setCfg: false,
-            //     Categories: [{value:'LilJiiiiLukkkcy',key:"x"}, {value:'豆腐干岁法',key:"x"}, {value:'大幅度',key:"x"}, {value:'豆腐干反对',key:"x"}, {value:'的是法国',key:"x"}, {value:'都十分广',key:"x"}],
-            //     Series: [{
-            //         'Name': '语文',
-            //         'Data': ["0.04", "0.45", 0.3, 1.2, 0.25, 0.84]
-            //     }],
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-
-            // //canvas柱状图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 1,
-            //     Width: 420,
-            //     Height: 300,
-            //     setCfg: false,
-            //     Categories: [{value:'ttt',key:"x"},{value:'是的方的',key:"x"},{value:'第三是方',key:"x"}],
-            //     Series: [{
-            //         'Name': '语文1',
-            //         'Data': [10,70, 24]
-            //     },{
-            //         'Name': '语文2',
-            //         'Data': [90,60, 70]
-            //     },{
-            //         'Name': '语文3',
-            //         'Data': [80,20, 45]
-            //     },{
-            //         'Name': '语文4',
-            //         'Data': [40,80, 20]
-            //     },{
-            //         'Name': '语文5',
-            //         'Data': [70,30, 10]
-            //     },{
-            //         'Name': '语文6',
-            //         'Data': [50,60, 15]
-            //     }],
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-            // //canvas柱状图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 1,
-            //     Width: 420,
-            //     Height: 300,
-            //     setCfg: false,
-            //     Categories: ['LilJiLucy', '豆腐干岁的法', '大幅度', '豆腐干反对', '的是法国', '都十分广'],
-            //     Series: [{
-            //         'Name': '语文',
-            //         'Data': ["13.00", "4.45", 0.3, 2, 5, 4]
-            //     }],
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-            // //canvas折线图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 0,
-            //     Width: 420,
-            //     Height: 300,
-            //     setCfg: false,
-            //     Categories: ['LilJ','豆法','大幅度','干反对','是法国','十分广'],
-            //     Series:  [{
-            //     'Name': '语文',
-            //     'Data': ["3.00","4.45",3,2,5,4]
-            // }],
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-
-            // //canvas折线图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 0,
-            //     Width: 420,
-            //     Height: 300,
-            //     setCfg: false,
-            //     Categories: ['LilJiLucy', 'Lucy', 'LilJiLucy'],
-            //     Series:  [{
-            //     'Name': '语文',
-            //     'Data': ["10.00", "2.00", "9.45"]
-            // },{
-            //     'Name': '数学',
-            //     'Data': ["0.00", "8.60", "3.45"]
-            // },{
-            //     'Name': '英语',
-            //     'Data': ["2.00", "4.00", "5.45"]
-            // },{
-            //     'Name': '化学',
-            //     'Data': ["6.00", "9.70", "0.45"]
-            // }],
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-
-            // //折线图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 0,
-            //     Width: 420,
-            //     Height: 300,
-            //     setCfg: false,
-            //     Categories: ['Jim', 'Lucy', 'Lily', 'Adele', 'Novak', 'kkk', 'ffff', 'tttt', 'hhhh', 'ttxx'],
-            //     Series: [{
-            //         'Name': '语文',
-            //         'Data': [0, 20, 60, 40, 80, 66, 45, 55, 77, 73]
-            //     }, {
-            //         'Name': '数学',
-            //         'Data': [0, 80, 55, 76, 33, 45, 78, 34, 66, 88]
-            //     }, {
-            //         'Name': '英语',
-            //         'Data': [0, 24, 33, 54, 58, 45, 78, 66, 55, 60]
-            //     }],
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-
-            // // //折线图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 0,
-            //     Width: 600,
-            //     Height: 500,
-            //     setCfg: false,
-            //     Categories: ['JimJimJim', 'Lucy', 'LilJiLucy', 'Adele', 'NJimovak', 'JiJimm', 'Jisdm', 'Jidsm', 'Jim'],
-            //     Series: Series,
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-
-            // //canvas柱状图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 1,
-            //     Width: 600,
-            //     Height: 500,
-            //     setCfg: false,
-            //     Categories: ['LilJiLucy', 'Lucy', 'LiLilJiLuLucy', 'AdeLilJiLucyle', 'NJimovLilJiLucyak', 'JiJimm', 'Jisdm', 'Jidsm', 'Jim'],
-            //     Series: Series,
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-
-            // //柱图
-            // $('#cn_right').ChartBase({
-            //     ChartType: 1,
-            //     Width: 360,
-            //     Height: 420,
-            //     setCfg: false,
-            //     Categories: ['Jim', 'Lucy', 'Lily', 'Adele', 'Novak', 'kkk', 'ffff', 'tttt', 'hhhh', 'ttxx'],
-            //     Series: [{
-            //         'Name': '语文',
-            //         'Data': [100, 20, 60, 40, 80, 66, 45, 55, 77, 73]
-            //     }, {
-            //         'Name': '数学',
-            //         'Data': [40, 80, 55, 76, 33, 45, 78, 34, 66, 88]
-            //     }, {
-            //         'Name': '英语',
-            //         'Data': [10, 24, 33, 54, 58, 45, 78, 66, 55, 60]
-            //     }],
-            //     ShowTitle: true,
-            //     ClickChartCBack: function(ret) {
-            //         alert(ret.Name + ':' + ret.Data);
-            //     }
-            // });
-        })
+            //饼图
+            $('#cn_right').ChartBase({
+                ChartType: 2,
+                Width: 420,
+                Height: 420,
+                setCfg: false,
+                Categories: ['系列二'],
+                BarGap: 5,
+                Series: Series,
+                ShowTitle: true,
+                ClickChartCBack: function(ret) {
+                    alert(ret.Name + ':' + ret.Data);
+                }
+            });
+        });
     </script>
 </body>
 
