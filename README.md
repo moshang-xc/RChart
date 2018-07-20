@@ -15,3 +15,17 @@
 
 ### 饼图
 ![饼图](https://github.com/moshang-xc/gitskills/blob/master/share/chart2.jpg)
+
+## 安装
+```
+#clone
+git clone https://github.com/moshang-xc/RChart.git
+
+#安装迷你http服务器
+npm install http-mini
+
+cd Rchart
+
+#运行server
+http-mini 8088
+```
