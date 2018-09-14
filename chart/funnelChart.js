@@ -5,8 +5,7 @@ import {
     bitwise,
     slider,
     HideSec,
-    isInteger,
-    showDownload
+    isInteger
 } from './lib.js';
 
 let Funnel = function(opt = {}, target = $('body')) {
@@ -42,7 +41,6 @@ Funnel.prototype = {
         this.cacheCxt = this.cacheF.getContext('2d');
 
         this.$wrap.append(this.canvasF).append(this.$ToolTipWrap).appendTo(this.$outer);
-        // showDownload(this);
 
         this.sizePerc = 70; // 漏斗图所占画布百分比大小
         this.BiLi = 5 / 3; //漏斗图高宽比

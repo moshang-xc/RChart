@@ -467,7 +467,7 @@ function bitwise(k) {
     return (k + 0.5) << 0;
 }
 
-function slider(tar) {
+function Slider(tar) {
     this.target = tar.canvasF;
     this.tarBack = tar.canvasBack;
     this.tabControl = tar.$ToolTipWrap[0];
@@ -480,7 +480,8 @@ function slider(tar) {
     tar.opt.IsMobile ? this.bindMobileEvent() : this.bindPcEvent();
 }
 
-slider.prototype = {
+Slider.prototype = {
+    constructor: Slider,
     bindMobileEvent: function() {
         var that = this;
 
@@ -538,7 +539,6 @@ slider.prototype = {
         that.tabControl.bind('mousedown.chart', start);
 
         function start(e) {
-            //console.log('start');
             e = e || window.event;
             that.startPos = {
                 x: e.pageX,
@@ -561,7 +561,6 @@ slider.prototype = {
                 event.preventDefault(); //阻止触摸事件的默认行为，即阻止滚屏
                 var left = that.startleft + endPos.x;
                 left = left >= 0 ? 0 : (left < -that.range ? -that.range : left);
-                //console.log(left);
                 that.target.style.left = left + 'px';
                 that.tarBack && (that.tarBack.style.left = left + 'px');
             }
@@ -597,6 +596,7 @@ function sliderBar(tar) {
     }
 }
 sliderBar.prototype = {
+    constructor: sliderBar,
     bindMobileEvent: function() {
         var that = this;
 
@@ -604,7 +604,6 @@ sliderBar.prototype = {
         that.SlideGap = 30;
 
         function start(event) {
-            //console.log('start');
             var touch = event.targetTouches[0];
             that.startPos = {
                 x: touch.pageX,
@@ -628,7 +627,6 @@ sliderBar.prototype = {
 
                 var index = endPos.x > 0 ? Math.floor(endPos.x / that.SlideGap) : Math.ceil(endPos.x / that.SlideGap);
                 index = that.showIndex - index;
-                //console.log(index);
                 if (index == that.chart.showIndex || index < 0 || index > that.range) return;
                 that.chart.showIndex = index;
                 that.chart.Slider.call(that.chart);
@@ -636,7 +634,6 @@ sliderBar.prototype = {
         }
 
         function end(event) {
-            //console.log('end');
             //解绑事件
             that.showIndex = that.chart.showIndex;
             that.tabControl.removeEventListener('touchmove', move, false);
@@ -800,7 +797,7 @@ export {
     isInteger,
     bitwise,
     toRadians,
-    slider,
+    Slider,
     sliderBar,
     drawBackGrid,
     showDownload
