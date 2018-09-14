@@ -1,170 +1,162 @@
 .BaseChartWrapOuter ul,
 .BaseChartWrapOuter li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .BaseChartWrapOuter {
-    border: 1px solid #38adff;
-    position: relative;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.14);
-    border-radius: 3px;
-    text-align: center;
-    margin-right: 1em;
-    float: left;
-    font-family: "microsoft yahei";
-    overflow: hidden;
+  border: 1px solid #38adff;
+  position: relative;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.14);
+  border-radius: 3px;
+  text-align: center;
+  margin-right: 1em;
+  float: left;
+  font-family: "microsoft yahei";
+  overflow: hidden;
 }
 
 .BaseChartWrapOuter:hover {
-    box-shadow: 0 0 9px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.24);
 }
 
 .BaseChartWrapOuter .BaseChartTitle {
-    width: 100%;
-    height: 35px;
-    line-height: 35px;
-    text-align: left;
-    text-indent: 1em;
-    background-color: #38adff;
-    color: white;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  text-align: left;
+  text-indent: 1em;
+  background-color: #38adff;
+  color: white;
 }
 
 .BaseChartWrapOuter .BaseChartChart {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .BaseChartWrapOuter .BaseChartCategories,
 .BaseChartWrapOuter .BaseChartSeries {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    position: absolute;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
 }
 
 .BaseChartWrapOuter .BaseChartSeries.showChart {
-    height: 30px;
-    line-height: 30px;
+  height: 30px;
+  line-height: 30px;
 }
 
 .BaseChartWrapOuter .BaseChartCategories {
-    left: 0;
-    bottom: 50px;
-    background-color: #fff;
-}
-
-.BaseChartCategories.BaseChartHover,
-.BaseChartChart.BaseChartHover,
-.BaseChartSeries.BaseChartHover {
-    /*outline: 1px solid #429CF3;*/
+  left: 0;
+  bottom: 50px;
+  background-color: #fff;
 }
 
 .BaseChartWrapOuter .BaseChartSeries {
-    left: 0;
-    bottom: 0px;
+  left: 0;
+  bottom: 0px;
 }
 
 .report-home .BaseChartWrapOuter .BaseChartSeries {
-    bottom: 6px;
+  bottom: 6px;
 }
 
 .BaseChartWrapOuter .BaseChartLengend {
-    height: 100%;
-    position: relative;
-    left: 50%;
+  height: 100%;
+  position: relative;
+  left: 50%;
 }
 
 .BaseChartWrapOuter .SeriesUL {
-    width: 100%;
-    padding: 0 20px;
-    position: absolute;
-    left: -50%;
-    background-color: #fff;
-    border-radius: 3px;
-    box-sizing: border-box;
-    /*box-shadow: 0 0 3px rgba(0,0,0,0.2);*/
+  width: 100%;
+  padding: 0 20px;
+  position: absolute;
+  left: -50%;
+  background-color: #fff;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
 .BaseChartWrapOuter .SeriesLi {
-    position: relative;
-    display: inline-block;
-    /* å…¼å®¹IE7 */
-    *display: inline;
-    *zoom: 1;
-    text-align: center;
-    height: 100%;
-    line-height: 30px;
-    margin-right: 1em;
-    padding-left: 15px;
-    min-height: 20px;
-    font-size: 13px;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  text-align: center;
+  height: 100%;
+  line-height: 30px;
+  margin-right: 1em;
+  padding-left: 15px;
+  min-height: 20px;
+  font-size: 13px;
+  cursor: pointer;
 }
 
 .BaseChartWrapOuter .SeriesLi i {
-    height: 12px;
-    width: 12px;
-    position: absolute;
-    left: 0;
-    border-radius: 3px;
-    top: 50%;
-    margin-top: -6px;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  left: 0;
+  border-radius: 3px;
+  top: 50%;
+  margin-top: -6px;
 }
 
 .BaseChartWrapOuter .bar_close {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    background-color: #000;
-    border-radius: 10px;
-    line-height: 20px;
-    text-align: center;
-    font-size: 16px;
-    color: white;
-    cursor: pointer;
-    display: none;
-    text-align: center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #000;
+  border-radius: 10px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  text-align: center;
 }
 
 .BaseChartWrapOuter .bar_close:hover {
-    background-color: red;
+  background-color: red;
 }
 
 .bar_all {
-    position: absolute;
-    right: 0px;
-    top: 0;
-    display: none;
-    cursor: pointer;
-    font-family: arial;
-    font-size: 13px;
-    font-weight: bold;
-    font-style: normal;
-    height: 30px;
-    width: 30px;
-    color: #333;
-    text-align: center;
-    line-height: 30px;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  display: none;
+  cursor: pointer;
+  font-family: arial;
+  font-size: 13px;
+  font-weight: bold;
+  font-style: normal;
+  height: 30px;
+  width: 30px;
+  color: #333;
+  text-align: center;
+  line-height: 30px;
 }
 
 .bar-animate {
-    -webkit-animation: twinkling 2s infinite ease-in-out;
-    -ms-animation: twinkling 2s infinite ease-in-out;
-    -o-animation: twinkling 2s infinite ease-in-out;
-    animation: twinkling 2s infinite ease-in-out;
+  -webkit-animation: twinkling 2s infinite ease-in-out;
+  -ms-animation: twinkling 2s infinite ease-in-out;
+  -o-animation: twinkling 2s infinite ease-in-out;
+  animation: twinkling 2s infinite ease-in-out;
 }
 
 .chart-arrow {
-    position: absolute;
-    left: 0;
-    top: 5px;
-    height: 100%;
-    width: 100%;
-    z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
 }
 
 .bar_all_up:before,
@@ -175,259 +167,232 @@
 .bar_all_up .chart-arrow:after,
 .bar_all_down .chart-arrow:before,
 .bar_all_down .chart-arrow:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    border: 6px solid transparent;
+  content: "";
+  position: absolute;
+  left: 0;
+  border: 6px solid transparent;
 }
 
 .bar_all_up:before,
 .bar_all_up .chart-arrow:before {
-    top: 4px;
-    left: 50%;
-    margin-left: -6px;
-    border-bottom-color: #565656;
+  top: 4px;
+  left: 50%;
+  margin-left: -6px;
+  border-bottom-color: #565656;
 }
 
 .bar_all_up:after,
 .bar_all_up .chart-arrow:after {
-    top: 5px;
-    left: 50%;
-    border-bottom-color: #fff;
-    margin-left: -6px;
+  top: 5px;
+  left: 50%;
+  border-bottom-color: #fff;
+  margin-left: -6px;
 }
 
 .bar_all_down:before,
 .bar_all_down .chart-arrow:before {
-    top: 8px;
-    left: 50%;
-    margin-left: -6px;
-    border-top-color: #565656;
+  top: 8px;
+  left: 50%;
+  margin-left: -6px;
+  border-top-color: #565656;
 }
 
 .bar_all_down:after,
 .bar_all_down .chart-arrow:after {
-    top: 7px;
-    left: 50%;
-    margin-left: -6px;
-    border-top-color: #fff;
+  top: 7px;
+  left: 50%;
+  margin-left: -6px;
+  border-top-color: #fff;
 }
 
 .bar_all_down:before,
 .bar_all_down:after {
-    z-index: 200;
+  z-index: 200;
 }
 
 .bar_all_right {
-    transform: rotate(90deg);
-    top: auto;
-    bottom: 0;
+  transform: rotate(90deg);
+  top: auto;
+  bottom: 0;
 }
 
 .bar_all_left {
-    transform: rotate(-90deg);
-    top: auto;
-    left: 0;
-    bottom: 0;
-    right: auto;
+  transform: rotate(-90deg);
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: auto;
 }
 
 @-webkit-keyframes twinkling {
-    /*é€æ˜Žåº¦ç”±0åˆ°1*/
-    0% {
-        opacity: 0.4;
-        /*é€æ˜Žåº¦ä¸º0*/
-    }
-    100% {
-        opacity: 1;
-        /*é€æ˜Žåº¦ä¸º1*/
-    }
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes twinkling {
-    0% {
-        opacity: 0.4;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .wrapUl {
-    transform: translate(0);
-    transition: transform ease .5s;
+  transform: translate(0);
+  transition: transform ease 0.5s;
 }
 
 .BaseChartWrapOuter .BaseChartCateItem {
-    position: absolute;
-    top: 0;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .BaseChartWrapOuter .BaseChartCategories:hover .bar_close,
 .BaseChartWrapOuter .BaseChartSeries:hover .bar_close {
-    display: block;
+  display: block;
 }
 
 .BaseChartField {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .BaseChartFieldSet {
-    position: absolute;
-    top: 0;
-    right: 0;
-    max-width: 120px;
-    text-align: left;
-    padding: 5px;
-    z-index: 300;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 3px 0 0 3px;
-    display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 120px;
+  text-align: left;
+  padding: 5px;
+  z-index: 300;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px 0 0 3px;
+  display: none;
 }
 
 .BaseChartFieldSet .fieldItem {
-    float: left;
-    position: relative;
-    height: 25px;
-    line-height: 25px;
-    padding: 0 1em;
-    border-radius: 2px;
-    background-color: #000;
-    cursor: pointer;
-    color: white;
-    font-size: 12px;
-    margin: 5px;
+  float: left;
+  position: relative;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 1em;
+  border-radius: 2px;
+  background-color: #000;
+  cursor: pointer;
+  color: white;
+  font-size: 12px;
+  margin: 5px;
 }
 
 .BaseChartFieldSet .fieldItem i {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    height: 16px;
-    line-height: 16px;
-    width: 16px;
-    border-radius: 8px;
-    background-color: #000;
-    color: white;
-    font-size: 12px;
-    font-family: 'å¾®è½¯é›…é»‘';
-    font-style: normal;
-    text-align: center;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  height: 16px;
+  line-height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background-color: #000;
+  color: white;
+  font-size: 12px;
+  font-family: "microsoft yahei";
+  font-style: normal;
+  text-align: center;
 }
 
 .BaseChartFieldSet .fieldItem i:hover {
-    background-color: #f00;
+  background-color: #f00;
 }
 
 /*********************  åž‚ç›´æŸ±å½¢å›¾  ********************/
 
 .BaseChartWrap {
-    position: relative;
+  position: relative;
 }
 
 .BarChartWrap .BarChart_vBar {
-    position: relative;
+  position: relative;
 }
 
 .BarChart_vBar .line {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    font-size: 12px;
-    font-family: "å¾®è½¯é›…é»‘";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  font-size: 12px;
+  font-family: "microsoft yahei";
 }
 
-/*.BarChart_vBar .name {
-    height: 20px;
-    width: 100%;
-    line-height: 20px;
-    text-align: center;
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-}*/
-
 .BarChart_vBar .rate {
-    position: absolute;
-    bottom: 0;
-    /*background-color: #99c0ff;*/
+  position: absolute;
+  bottom: 0;
 }
 
 .BarChart_vBar .rate .bg {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0;
-    background-color: #99c0ff;
-    transition: all 1s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background-color: #99c0ff;
+  transition: all 1s;
 }
 
 .BarChart_vBar .per {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 20px;
-    width: 100%;
-    line-height: 20px;
-    text-align: center;
-    color: #99c0ff;
-    opacity: 0;
-    transition: all .5s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20px;
+  width: 100%;
+  line-height: 20px;
+  text-align: center;
+  color: #99c0ff;
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 .toolTip {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #eee;
-    padding: 5px 10px;
-    /*height: 28px;*/
-    line-height: 16px;
-    font-size: 12px;
-    text-align: left;
-    border-radius: 4px;
-    z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #eee;
+  padding: 5px 10px;
+  line-height: 16px;
+  font-size: 12px;
+  text-align: left;
+  border-radius: 4px;
+  z-index: 100;
 }
 
-/*.toolTip:before {
-    content: '';
-    width: 0;
-    height: 0;
-    display: block;
-    position: absolute;
-    top: 5px;
-    left: -18px;
-    border: 9px solid #000;
-    border-color: transparent rgba(0,0,0,0.6) transparent transparent;
-}*/
-
 .BarChartLineWrap {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    z-index: 200;
-    cursor: pointer;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 200;
+  cursor: pointer;
 }
 
 .BarChartLineWrap:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .RadarChartWrap,
 .FunnelChartWrap,
 .PieChartWrap,
 .LineChartWrap {
-    position: relative;
+  position: relative;
 }
 
 /*       radar                */
@@ -436,176 +401,168 @@
 .LineChartCanvas,
 .PieChartCanvas,
 .FunnelChartCanvas {
-    position: absolute;
-    left: 0;
-    top: 0;
-    cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
 }
 
 .clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 .ChartToolTopWrap {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  cursor: pointer;
 }
 
 .ChartToolTip {
-    font-size: 12px;
-    padding: 6px 12px;
-    text-align: left;
-    position: absolute;
-    border-radius: 4px;
-    font-family: 'microsoft yahei';
-    border: 0px solid rgb(51, 51, 51);
-    transition: left 0.4s, top 0.4s, right 0.4s;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.701916);
-    display: none;
-    z-index: 1;
+  font-size: 12px;
+  padding: 6px 12px;
+  text-align: left;
+  position: absolute;
+  border-radius: 4px;
+  font-family: "microsoft yahei";
+  border: 0px solid rgb(51, 51, 51);
+  transition: left 0.4s, top 0.4s, right 0.4s;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.701916);
+  display: none;
+  z-index: 1;
 }
 
-/*.ChartToolTipMobile {
-    border: 0;
-    box-shadow: none;
-    background-color: rgba(0,0,0,0.3);
-}*/
-
 .TipName {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .TipData {
-    line-height: 16px;
+  line-height: 16px;
 }
 
 .ChartScrollWrap {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: rgba(184, 221, 232, 0.5);
-    cursor: pointer;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(184, 221, 232, 0.5);
+  cursor: pointer;
 }
 
 .ChartScrollWrap .ChartScrollBar {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: rgba(75, 155, 237, 0.8);
-    height: 4px;
-    border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(75, 155, 237, 0.8);
+  height: 4px;
+  border-radius: 5px;
 }
 
 .ChartScrollWrap .BarIcon {
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid #4b9bed;
-    top: -5px;
-    transform: translate(-50%, 0);
-    left: 30px;
-    width: 10px;
-    height: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 0 6px #4b9bed;
-    cursor: move;
-    z-index: 10002;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #4b9bed;
+  top: -5px;
+  transform: translate(-50%, 0);
+  left: 30px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 6px #4b9bed;
+  cursor: move;
+  z-index: 10002;
 }
 
 .ChartScrollWrap .BarTip {
-    height: 10px;
-    width: 10px;
-    position: absolute;
-    cursor: pointer;
-    z-index: 10001;
-    top: -3px;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10001;
+  top: -3px;
 }
 
 .BarTip:before {
-    content: "";
-    width: 4px;
-    cursor: pointer;
-    height: 4px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -2px 0 0 -2px;
-    background-color: #aaa;
+  content: "";
+  width: 4px;
+  cursor: pointer;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -2px 0 0 -2px;
+  background-color: #aaa;
 }
 
 .tool-tip {
-    position: fixed;
-    padding: 3px 8px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    color: #757575;
-    font-size: 12px !important;
-    border-radius: 4px;
-    max-width: 200px;
-    text-align: left;
-    z-index: 10000;
-    line-height: 1.4238;
+  position: fixed;
+  padding: 3px 8px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #757575;
+  font-size: 12px !important;
+  border-radius: 4px;
+  max-width: 200px;
+  text-align: left;
+  z-index: 10000;
+  line-height: 1.4238;
 }
 
 .tool-tip:before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -6px;
-    border: 6px solid transparent;
-    border-top-color: #ccc;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border: 6px solid transparent;
+  border-top-color: #ccc;
 }
 
 .tool-tip:after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -6px;
-    margin-top: -1px;
-    border: 6px solid transparent;
-    border-top-color: #fff;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  margin-top: -1px;
+  border: 6px solid transparent;
+  border-top-color: #fff;
 }
 
 .icon-tooltip {
-    position: absolute;
-    top: 50%;
-    font-size: 20px;
-    border-radius: 50%;
-    color: #757575;
-    width: 13px;
-    text-align: center;
-    height: 13px;
-    margin-top: -10px;
-    margin-left: 2px;
-    /*cursor: pointer;*/
-    /*border: 1px solid #4b9bed;*/
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  border-radius: 50%;
+  color: #757575;
+  width: 13px;
+  text-align: center;
+  height: 13px;
+  margin-top: -10px;
+  margin-left: 2px;
 }
 
 .demotext {
-    line-height: 1.2857;
-    border: 1px solid #ff4141;
-    color: #ff4141;
-    background-color: #fff;
-    position: absolute;
-    font-style: normal;
-    right: 12px;
-    top: 12px;
-    border-radius: 14px;
-    font-size: 14px;
-    width: 70px;
-    box-sizing: border-box;
-    text-align: center;
-    display: none;
+  line-height: 1.2857;
+  border: 1px solid #ff4141;
+  color: #ff4141;
+  background-color: #fff;
+  position: absolute;
+  font-style: normal;
+  right: 12px;
+  top: 12px;
+  border-radius: 14px;
+  font-size: 14px;
+  width: 70px;
+  box-sizing: border-box;
+  text-align: center;
+  display: none;
 }
